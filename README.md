@@ -2,15 +2,14 @@
 출력은 되지 않지만 모듈로써 가져다 쓸 수는 있음
 ###1-1. if 논리 연산자 (==)
     ==, === : 참
-    >== : 이상
-    <== : 이하
     !== : false
     
 ```javascript
 console.log(null==undefined); --true
 console.log(null===undefined); --false
 ```
-  ==은 형 변환을 시키면서 다른 문자열을 같다고 표기
+
+  ==은 형 변환을 시키면서 다른 유사값을 같다고 표기
   ===은 값이 다른 것으로 인식하여 다른 값으로 표기
   
 ###1-2. if 논리 연산자 (&&)
@@ -21,11 +20,13 @@ var num =4;
 if (num>3 && num<6){
   console.log('4 is greater than 3')
   }
+  //&&은 두번째 값이 출
 ```
-    num 이 if의 두 조건 모두 충족할 시에 씀
+
+    num 이 if의 두 조건 모두 true일 시에 씀
 
 ###1-3. if 논리 연산자 (||)
-      두 조건 중 하나만 적합할 시에 씀 (or)
+      두 조건 중 하나만 적합할 시에 씀(or)
       
 ```javascript
 var count =9;
@@ -57,10 +58,12 @@ console.log('.......');
 ###1-5. Function (함수)
     -Return: 함수에 연산된 결과 값을 반환 할 때 씀
 ```javascript
+function getMoney(money){
   if(money !== 0){
     money=money || 100;
   }
-  //if 안에만 들어가는 || 가 밖으로 나오게 되면 불리언 값으로 (?)
+  //money와 100이 모두 참이면 money로 출력
+  
   if (typeof money !== 'number'){
     console.error('ERROR');
   }
